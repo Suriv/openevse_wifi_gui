@@ -31,7 +31,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --config webpack.config.js --open",
     "build": "webpack",
     "prepare": "npm run build",
     "lint": "eslint src"

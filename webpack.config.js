@@ -108,6 +108,17 @@ module.exports = {
       new UglifyJsPlugin({}),
       new OptimizeCssAssetsPlugin({})
     ]
+  },
+  devServer: {
+    contentBase: './dist',
+    // port: 8081,
+    compress: true,
+    watchOptions: {
+      poll: true
+    },
+    stats: {
+      children: false
+    }
   }
 };
 
