@@ -8,8 +8,8 @@
     "knockout-mapping": "2.6.0"
   },
   "devDependencies": {
-    "@babel/core": "7.3.4",
-    "@babel/preset-env": "7.3.4",
+    "@babel/core": "7.4.0",
+    "@babel/preset-env": "7.4.1",
     "clean-webpack-plugin": "2.0.1",
     "css-loader": "2.1.1",
     "eslint": "5.15.3",
@@ -17,16 +17,18 @@
     "file-loader": "3.0.1",
     "html-webpack-plugin": "3.2.0",
     "imports-loader": "0.8.0",
-    "mini-css-extract-plugin": "0.4.3",
+    "mini-css-extract-plugin": "0.5.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
-    "style-loader": "0.23.0",
-    "uglify-js": "3.4.10",
+    "style-loader": "0.23.1",
+    "uglify-js": "3.5.0",
     "uglifyjs-webpack-plugin": "2.1.2",
     "webpack": "4.29.6",
     "webpack-bundle-analyzer": "3.1.0",
     "webpack-cli": "3.3.0",
     "webpack-dev-server": "3.2.1",
-    "webpack-merge-and-include-globally": "2.1.16"
+    "webpack-merge-and-include-globally": "2.1.16",
+    "node-sass": "4.11.0",
+    "sass-loader": "7.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
