@@ -37,8 +37,31 @@ module.exports = {
           "css-loader"
         ]
       },
+
       {
         test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]"
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(ico|xml|webmanifest)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]"
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff)$/,
         use: [
           {
             loader: "file-loader",
