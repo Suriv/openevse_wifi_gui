@@ -1,0 +1,72 @@
+.ar_charge{
+  //lorem
+  & > div{
+    padding:0 0 1rem 0;
+    margin:1rem 0;
+  }
+  .options{
+   border-bottom:0.1rem solid $open-very-light-pink-five;
+  }
+
+  .mode{
+      em{
+        font-style: normal;
+      }
+      .m_data{
+        span{
+          font-size:1.8rem;
+          &:nth-child(2){
+            font-size:2.4rem;
+            font-weight: 300;
+            &::after{
+              content: attr(data-prop);
+              font-size:1.5rem;
+            }
+          }
+          &:nth-child(3){
+            font-size:1.5rem;
+          }
+        }
+      }
+      .updateBad {
+        color: $open-orangish-red;
+      }
+      .updateGood {
+        color: $open-leafy-green;
+      }
+      .updateSlow {
+        color:$open-squash;
+      }
+      .updateSlower {
+        color:$open-orange;
+      }
+  }
+
+  @media (map-get($rd-types, md)){
+   width:$hundred;
+
+   & > div{
+    margin: 1rem auto;
+    width:90%;
+    & >  ul{
+      display:flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li{
+       text-align:left;
+       width:32%;
+       input{
+         &[type="text"],
+         &[type="password"],
+         &[type="file"],
+         &[type="time"],
+         &[type="date"]{
+           width:$hundred;
+         }
+        }
+       }
+    }
+   }
+  }
+}

@@ -1,0 +1,36 @@
+button, .button{
+  width:$hundred;
+  margin:0 0 1rem 0;
+  background: $open-bluegreen;
+  color:$open-white;
+  font-weight: bold;
+  font-size:1.4rem;
+  padding:0.9rem 0.5rem;
+  text-align:center;
+  border-radius:0.6rem;
+  border:none;
+  cursor: pointer;
+
+  &.second{
+    background:$open-very-light-pink-four;
+    color:$open-greyish-brown;
+  }
+
+  &:disabled{
+    @include disabled();
+    border:0.1rem solid $open-very-light-pink-four;
+    background:$open-white;
+    color:$open-very-light-pink-five;
+  }
+
+}
+@media (map-get($rd-types, md)){
+  .buttonholder{
+    display: flex;
+    justify-content: space-between;
+    button{
+      width:48%;
+      margin:0 auto;
+    }
+  }
+}

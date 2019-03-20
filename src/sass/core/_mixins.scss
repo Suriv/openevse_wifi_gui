@@ -1,0 +1,85 @@
+%replace-text-by-image-base {
+	text-indent:-9999px;
+	border:none;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin expand($name,$value){
+	-moz-#{$name}: $value;
+	-webkit-#{$name}: $value;
+	-o-#{$name}: $value;
+	-ms-#{$name}: $value;
+	#{$name}: $value;
+}
+
+
+
+@mixin img($img,$type:"svg",$extension:".svg",$position:0 0,$size:initial,$color:transparent,$repeat: no-repeat) {
+	background: {
+		color: $color;
+		image: url('../assets/'+$type+'/'+$img+$extension), none;
+		position: $position;
+		repeat: $repeat;
+		size: $size;
+	}
+}
+
+
+@mixin replaceTextWithImage($img, $width, $height) {
+	@extend %replace-text-by-image-base;
+	width: $width;
+	height: $height;
+	@include ico($img);
+}
+
+@mixin curved-border($height, $border, $bottom:9px,  $left:-30px, $width:120%) {
+	position: absolute;
+	bottom: $bottom;
+	left: $left;
+	width: $width;
+	height: $height;
+	border-radius: $border;
+}
+
+
+@mixin clearfix(){
+  &:after{
+	clear: both; content: "."; display: block; height: 0; visibility: hidden;
+  }
+}
+
+
+@mixin calc($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+
+// @mixin animation($value) {
+// 	  -ms-animation: $value;
+// 		  animation: $value;
+// }
+
+// @mixin keyframes($name) {
+//   @-ms-keyframes #{$name}     { @content }
+//   @keyframes #{$name}         { @content }
+// }
+
+@mixin grid (){
+	display: gird;
+	display: -ms-grid;
+}
+@mixin font-face($font-family, $font-name) {
+  @font-face {
+	font: {family: $font-family;}
+	src: url(''+ $font-name + '.woff') format('woff');
+  }
+}
+
+@mixin disabled(){
+  cursor:default;
+  pointer-events: none;
+  user-select: none;
+}

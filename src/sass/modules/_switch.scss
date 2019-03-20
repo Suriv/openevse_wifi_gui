@@ -1,0 +1,87 @@
+.switch_c{
+  margin:1rem 0;
+  width:$hundred;
+  text-align:center;
+  span{
+    font-size:1.4rem;
+    margin:0 1rem 0 1rem;
+    &.selected{
+      color:$open-bluegreen;
+    }
+  }
+  div{
+      display:inline-block;
+    }
+}
+.switch {
+  position: relative;
+  top:0.4rem;
+  width: 3rem;
+  user-select:none;
+  input {
+    display: none;
+
+    &:checked + label {
+      background-color: $open-bluegreen-50;
+    }
+    &:checked + label, &:checked + label:before {
+     border-color:$open-bluegreen-50;
+    }
+    &:checked + label .switch-inner {
+      margin-left: 0;
+    }
+    &:checked + label:before {
+      right: 0px;
+      background:$open-bluegreen;
+    }
+  }
+
+  label {
+    display: block;
+    overflow: hidden; cursor: pointer;
+    height: 1.3rem;
+    padding: 0;
+    line-height: 1.3rem;
+    border: 0px solid $open-white;
+    border-radius: 2.3rem;
+    background: $open-brownish-grey-50;
+
+    &::before{
+      content: "";
+      display: block; width: 2.3rem;
+      margin: -0.5rem;
+      background: $open-brownish-grey;
+      position: absolute; top: 0; bottom: 0;
+      right: 1.3rem;
+      border-radius: 2.3rem;
+    }
+  }
+
+}
+
+.t_switch{
+  display:flex;
+  width:$hundred;
+  align-items: center;
+  justify-content: space-between;
+  .switch_c{
+    width:auto;
+  }
+  img{
+    width:87%;
+  }
+}
+@media (map-get($rd-types, lg)){
+  .switch_c{
+    span{
+      font-size:1.2rem;
+    }
+  }
+  .t_switch{
+    width:$hundred;
+  }
+}
+
+
+
+

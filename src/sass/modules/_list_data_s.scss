@@ -1,0 +1,42 @@
+.l_data_s{
+  margin:1rem 0;
+  li{
+    display:flex;
+    margin:0 0 1rem 0;
+    justify-content: space-between;
+    @include clearfix();
+    &.error{
+      border-left:0.5rem solid $open-orangish-red;
+      span{
+        color:$open-orangish-red;
+      }
+    }
+    span{
+      width:49%;
+      padding:0.5rem;
+
+      color:$open-heather;
+      &:nth-child(2){
+        color:$open-greyish-brown;
+      }
+      &:nth-child(3){
+        text-align:right;
+      }
+    }
+    .switch{
+      top:0;
+      float: right;
+    }
+  }
+  em{
+    font-style: normal;
+  }
+  @media (map-get($rd-types, md)){
+   display:flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   li{
+    width:48%;
+   }
+  }
+}

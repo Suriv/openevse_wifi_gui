@@ -1,0 +1,39 @@
+.ar_status{
+  padding:0;
+  .status{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding:1.5rem 4rem 1.5rem 1.6rem;
+    background:$open-vibrant-green;
+    h2, h3{
+      color:$open-white;
+      width:$hundred;
+    }
+    h2{
+      font-size:2rem;
+    }
+    h3{
+      text-align: right;
+      font-size:4rem;
+    }
+  }
+
+  &.ready .status {
+    background:$open-vibrant-green;
+  }
+  &.connected .status {
+    background:$open-pale-lime;
+    h2,h3{
+      color:$open-greyish-brown;
+    }
+  }
+  &.charging .status {
+    background:$open-azure;
+    h2,h3{
+      color:$open-greyish-brown;
+    }
+  }
+  &.sleeping .status {
+    background:$open-vivid-purple;
+  }
+}

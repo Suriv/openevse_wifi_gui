@@ -1,0 +1,31 @@
+#container{
+  width:100%;
+}
+
+section{
+  width:100%;
+  padding: 0 1.5rem;
+}
+
+article, section, footer{
+  position:relative;
+}
+
+@media (map-get($rd-types, md)){
+  section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (map-get($rd-types, lg)){
+  #container{
+    padding:0;
+    width:92rem;
+    margin:0 auto;
+  }
+
+
+
+}

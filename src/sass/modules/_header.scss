@@ -1,0 +1,57 @@
+header{
+  padding:1rem;
+  margin: 0 0 3rem 0;
+  display:flex;
+  align-items: baseline;
+  position: relative;
+  article{
+    background:none;
+    box-shadow:none;
+  }
+  h1{
+    display:block;
+    flex:1;
+    height:7rem;
+    font-size:3rem;
+    font-weight:normal;
+    color:$open-bluegreen;
+    margin:0 auto 2rem auto;
+    position:relative;
+    padding:1rem 0 0 8rem;
+    width:80%;
+    span{
+      text-transform: uppercase;
+      color:$open-black;
+      font-weight:bold;
+      font-size:3.5rem;
+    }
+    &::before{
+      display:inline-block;
+      position: absolute;
+      left:0;
+      top:0;
+      font-size:6rem;
+      width:7rem;
+      @extend %icoFont;
+      content:$open-logo;
+
+    }
+  }
+
+
+  @media (map-get($rd-types, sm)){
+    h1{
+      font-size:4.5rem;
+    }
+  }
+  @media (map-get($rd-types, lg)){
+    padding:1rem 0;
+    h1{
+      width:32rem;
+      flex:1;
+    }
+    article{
+      position:relative;
+    }
+  }
+}

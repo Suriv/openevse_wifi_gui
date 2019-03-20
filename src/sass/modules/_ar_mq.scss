@@ -1,0 +1,20 @@
+.ar_mq{
+  width: $hundred;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+
+  .mq_s,.solar{
+    width:48%;
+  }
+
+  .buttonholder{
+    width:$hundred;
+    justify-content: flex-end;
+  }
+}
+.ar_emoncms{
+  .l_data li span {
+    min-height: 5rem;
+  }
+}

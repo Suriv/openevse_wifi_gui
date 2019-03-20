@@ -1,0 +1,59 @@
+
+// Colors
+$open-black: #000000;
+$open-brownish-grey: #666666;
+$open-greyish-brown: #4a4a4a;
+$open-purple-grey: #7a787a;
+$open-brown-grey: #979797;
+$open-heather: #a19ea2;
+$open-very-light-pink: #b7b7b7;
+$open-very-light-pink-two: #bababa;
+$open-very-light-pink-five: #bbbbbb;
+$open-very-light-pink-four: #d8d8d8;
+$open-very-light-pink-three: #e5e5e5;
+$open-very-light-pink-four-16:rgba(216, 216, 216, 0.16);
+$open-brownish-grey-50: rgba(102, 102, 102, 0.5);
+$open-light-royal-blue: #3550fa;
+$open-vibrant-blue: #0035ff;
+$open-azure: #0092f7;
+$open-vibrant-green: #01c40e;
+$open-leafy-green: #32c832;
+$open-bluegreen: #008080;
+$open-bluegreen-50: rgba(0, 128, 128, 0.5);
+$open-squash: #f0b414;
+$open-orange: #ff7d14;
+$open-orangish-red: #f62c04;
+$open-dandelion: #f6df04;
+$open-pale-lime: #d5ff70;
+$open-vivid-purple: #9200f7;
+
+$open-grey: #F3F3F3;
+$open-white: #FFFFFF;
+
+//Iconos
+
+$open-arrow_c: "\e900";
+$open-arrow_c_down: "\e901";
+$open-info: "\e902";
+$open-logo: "\e903";
+$open-fill-4: "\e904";
+$open-fill-1: "\e905";
+$open-wf: "\e906";
+
+//Responsive configuration
+
+$mobile: 320px; // Phone portrait minimum
+$mobile-landscape: 480px; // Phone landscape minimum
+$tablet: 768px; // Tablet portrait minimum
+$desktop: 992px; // Laptop+Desktop minimum
+$large-desktop: 1200px; // Large screen minimum
+
+$rd-types:	(
+	xs:'min-width: #{$mobile}',
+	sm:'min-width: #{$mobile-landscape}',
+	md:'min-width: #{$tablet}',
+	lg:'min-width: #{$desktop}',
+  xl:'min-width: #{$large-desktop}'
+)!default; // Responsive configuration
+
+$hundred:	100%;

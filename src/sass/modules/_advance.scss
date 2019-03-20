@@ -1,0 +1,28 @@
+.advance{
+  width:$hundred - 10;
+  margin:0 auto 2rem auto;
+  text-align:center;
+  input{
+    display:none;
+    &:checked + label::after {
+      content:$open-arrow_c_down;
+    }
+  }
+  label{
+    font-size:2rem;
+    color:$open-greyish-brown;
+    cursor: pointer;
+    user-select:none;
+    &::after{
+      @extend %icoFont;
+      content:$open-arrow_c;
+      display:inline-block;
+      font-size:0.9rem;
+      position:relative;
+      margin:0 0 0  0.5rem;
+      top:-0.3rem;
+    }
+
+  }
+
+}

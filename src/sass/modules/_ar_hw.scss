@@ -1,0 +1,15 @@
+.ar_hw{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  h2{
+    width: $hundred;
+  }
+  ul{
+    width:46%;
+    li{
+      display:block;
+      width:$hundred;
+    }
+  }
+}

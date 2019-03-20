@@ -1,0 +1,15 @@
+article{
+  background:$open-white;
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+  padding:1.6rem 1rem;
+  margin:0 0 2rem 0;
+  width: $hundred;
+
+
+  @media (map-get($rd-types, md)){
+    width:49%;
+    padding:1.6rem 2rem;
+  }
+
+}

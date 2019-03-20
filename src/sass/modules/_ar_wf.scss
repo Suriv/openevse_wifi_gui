@@ -1,0 +1,84 @@
+.ar_wf{
+
+  .point{
+    position:relative;
+    font-size:1.4rem;
+    color:$open-heather;
+    display:inline-block;
+    line-height: 2.7rem;
+    min-height:2.7rem;
+    padding:0 0 0 4rem;
+    &::before,&::after{
+      @extend %icoFont;
+      content:$open-wf;
+      width:3.7rem;
+      height:2.7rem;
+      text-align:center;
+      position:absolute;
+      left:0;
+      padding:0.1rem 0 0 0;
+      transition: all 0.3s ease;
+    }
+    &::before{
+      top:0;
+      font-size: 2.7rem;
+      color: $open-very-light-pink-three;
+    }
+    &::after{
+
+      display:none;
+      color:$open-bluegreen;
+    }
+
+    &._25{
+      &::after{
+        top:1.6rem;
+        display:block;
+        font-size:1rem;
+      }
+    }
+    &._50{
+      &::after{
+        top:1rem;
+        display:block;
+        font-size:1.6rem;
+      }
+    }
+    &._75{
+      &::after{
+        top:0.6rem;
+        display:block;
+        font-size:2rem;
+      }
+    }
+    &._100{
+      &::before{
+        color:$open-bluegreen;
+      }
+    }
+
+  }
+  .n_steps{
+    ul li{
+      text-align: center;
+    }
+  }
+  @media (map-get($rd-types, md)){
+    width:$hundred;
+
+    & > div{
+      margin: 1rem auto;
+      width: 90%;
+    }
+
+    .n_steps{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+        ul{
+          width:48%;
+          margin:0;
+        }
+    }
+  }
+}

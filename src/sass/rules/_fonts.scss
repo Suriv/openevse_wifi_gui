@@ -1,0 +1,37 @@
+// Include family fonts
+
+// // Google Fonts
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+@include font-face(open, open);
+
+// Font Variables
+$helvetica-sans: "Helvetica Neue",Helvetica, sans-serif;
+$open-fonts: 'open';
+$reset-font-size: 1rem;
+
+%icoFont {
+  font-family: $open-fonts;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+%bodyCopy {
+	font-family: $helvetica-sans;
+	font-size: $reset-font-size;
+	line-height: normal;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+

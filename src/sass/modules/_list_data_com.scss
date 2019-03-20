@@ -1,0 +1,21 @@
+.l_data_com{
+  margin:1rem 0;
+  li{
+    display:flex;
+    justify-content: space-between;
+    padding:0 0 0.5rem 0;
+    border-bottom:0.1rem solid $open-very-light-pink-three;
+    span{
+      width:11%;
+      padding:0.5rem;
+      font-size:1.4rem;
+      color:$open-greyish-brown;
+
+      &:nth-child(2){
+        width:87%;
+        color:$open-heather;
+
+      }
+    }
+  }
+}

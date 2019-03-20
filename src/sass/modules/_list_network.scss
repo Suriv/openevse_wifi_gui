@@ -1,0 +1,60 @@
+.l_network{
+
+  padding:0;
+  li{
+    border-bottom: 0.1rem solid  $open-very-light-pink-three;
+
+    .net{
+      position:relative;
+      width:$hundred;
+      padding:1rem 0.5rem;
+      &.selected{
+        background: $open-very-light-pink-four-16;
+      }
+      input{
+        display:none;
+        width: $hundred;
+        &:checked + label {
+          font-weight: bold;
+        }
+      }
+
+      label{
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        height:3rem;
+        line-height: 3rem;
+      }
+    }
+    &:last-child{
+      text-align:center;
+      border:none;
+      margin:2rem 0;
+      height:3rem;
+    }
+    &.add{
+      padding: 1rem 0;
+    }
+    a{
+      font-size:1.4rem;
+      color:$open-greyish-brown;
+      position:relative;
+      padding:0 0 0 4rem;
+      &::before{
+        position: absolute;
+        top:-0.8rem;
+        left:0;
+        content:'+';
+        display:inline-block;
+        width:3rem;
+        height:3rem;
+        font-size:1.5rem;
+        line-height: 2.5rem;
+        color:$open-white;
+        background:$open-bluegreen;
+        border-radius:5rem;
+      }
+    }
+  }
+}

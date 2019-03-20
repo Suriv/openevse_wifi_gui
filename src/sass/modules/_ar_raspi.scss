@@ -1,0 +1,46 @@
+.ar_raspi{
+
+  .code{
+    background:$open-black;
+    color:$open-white;
+    font-size:1.2rem;
+    padding:2rem;
+  }
+  .terminal{
+    margin:2rem 0;
+  }
+  .commands{
+    ul{
+      display:none;
+    }
+
+    h3{
+      cursor: pointer;
+      &.open + ul{
+        display:block;
+      }
+    }
+  }
+
+
+  @media (map-get($rd-types, md)){
+    width: $hundred;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h2{
+      width:$hundred;
+    }
+
+    .commands, .terminal{
+      width:48%;
+    }
+    .terminal{
+      input{width: 100%;}
+      button{
+        width:50%;
+      }
+    }
+  }
+}

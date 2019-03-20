@@ -1,0 +1,17 @@
+.ar_setup{
+  ul{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li{
+      width:48%;
+    }
+    &:nth-of-type(1){
+      li{
+        &:first-child {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
