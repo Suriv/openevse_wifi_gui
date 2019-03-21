@@ -25,8 +25,18 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js"
   },
-  devServer: {
-    contentBase: "./dist"
+  resolve: {
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'src')
+    ],
+    extensions: ['.js'],
+    alias: {
+      '@scss': path.resolve(__dirname, 'src/sass'),
+      '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
+      '@img': path.resolve(__dirname, 'src/assets/img'),
+      '@ico': path.resolve(__dirname, 'src/assets/favicon')
+    }
   },
   module: {
     rules: [
