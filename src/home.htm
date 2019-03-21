@@ -213,9 +213,9 @@
                       <a href="#services" data-bind="click: function() { tab('services'); config.mqtt_enabled(true); }">Services</a>
                       tab.</p>
                 </div>
-
-                <ul>
-                <li class="switch_c" data-bind="visible: isEcoModeAvailable">
+                <!-- <ul  data-bind="visible: isEcoModeAvailable">  -->
+                <ul ><!-- only view -->
+                <li class="switch_c">
                     <span data-bind="css: {selected: !ecoMode() }">Normal (max)</span>
                     <div class="switch">
                         <input type="checkbox" name="ecoswitch" id="myecoswitch" data-bind="checked: ecoMode">
@@ -223,18 +223,18 @@
                     </div>
                     <span data-bind="css: {selected: ecoMode }">Eco (PV divert)</span>
                 </li>
-                  <li data-bind="visible: isEcoModeAvailable" class="m_data">
-                    <span>
-                        <em data-bind="visible: haveSolar">Solar:</em>
-                        <!-- <em data-bind="visible: haveGridIe">Grid Import/Export:</em> -->
-                    </span>
-                    <span data-bind="text: haveGridIe() ? status.grid_ie() : status.solar()" data-prop="w"></span>
-                    <span data-bind="text: formatUpdate(openevse.time.divert_update()), css: updateClass(openevse.time.divert_update())"></span>
-                  </li>
-                  <li data-bind="visible: ecoMode" class="m_data">
-                    <span>Charge rate:</span>
-                    <span data-bind="text: status.charge_rate" data-prop="A"></span>
-                  </li>
+                <li class="m_data">
+                  <span>
+                      <em data-bind="visible: haveSolar">Solar:</em>
+                      <!-- <em data-bind="visible: haveGridIe">Grid Import/Export:</em> -->
+                  </span>
+                  <span data-bind="text: haveGridIe() ? status.grid_ie() : status.solar()" data-prop="w"></span>
+                  <span data-bind="text: formatUpdate(openevse.time.divert_update()), css: updateClass(openevse.time.divert_update())"></span>
+                </li>
+                <li data-bind="visible: ecoMode" class="m_data">
+                  <span>Charge rate:</span>
+                  <span data-bind="text: status.charge_rate" data-prop="A"></span>
+                </li>
                 </ul>
 
             </div>
