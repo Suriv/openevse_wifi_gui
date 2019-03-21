@@ -372,16 +372,16 @@
 
 
         <!-- Safety -->
-        <!-- <article class="ar_safety" data-bind="visible: advancedMode() || !openevse.allTestsEnabled()"> -->
-        <article class="ar_safety" data-bind="visible: advancedMode()">
+
+        <article class="ar_safety" data-bind="visible: advancedMode() || !openevse.allTestsEnabled()">
           <div class="t_switch">
               <h2 data-bind="click: toggle.bind($data, showSafety)" class="info">Safety</h2>
               <div class="switch_c">
                   <div class="switch">
-                      <input type="checkbox" name="dev_sys_m" id="mydev_sys_m" data-bind="checked: developerMode">
+                      <input type="checkbox" name="dev_sys_m" id="mydev_sys_m" data-bind="checked: safetyMode">
                       <label for="mydev_sys_m"></label>
                   </div>
-                  <span data-bind="css: {selected: developerMode }">Developer Mode</span>
+                  <span data-bind="css: {selected: safetyMode }">Developer Mode</span>
               </div>
           </div>
 
@@ -400,63 +400,63 @@
           <ul class="l_data_s">
               <li data-bind="css: {error: 9 === status.state() }">
                 <span>GFI Self Test</span>
-                <span data-bind="visible: developerMode">
+                <span data-bind="visible: safetyMode">
                     <div class="switch">
                         <input type="checkbox" name="gfiSel" id="mygfiSel" data-bind="checked: openevse.gfiSelfTestEnabled">
                         <label for="mygfiSel"></label>
                     </div>
                 </span>
-                <span data-bind="text: openevse.gfiSelfTestEnabled() ? 'Enabled' : 'Disabled',visible: !developerMode()"></span>
+                <span data-bind="text: openevse.gfiSelfTestEnabled() ? 'Enabled' : 'Disabled',visible: !safetyMode()"></span>
               </li>
               <li data-bind="css: {error: 7 === status.state() }">
                 <span>Ground Monitoring</span>
-                <span data-bind="visible: developerMode">
+                <span data-bind="visible: safetyMode">
                     <div class="switch">
                         <input type="checkbox" name="ground" id="myground" data-bind="checked: openevse.groundCheckEnabled">
                         <label for="myground"></label>
                     </div>
                 </span>
-                <span data-bind="text: openevse.groundCheckEnabled() ? 'Enabled' : 'Disabled',visible: !developerMode()"></span>
+                <span data-bind="text: openevse.groundCheckEnabled() ? 'Enabled' : 'Disabled',visible: !safetyMode()"></span>
               </li>
               <li data-bind="css: {error: 8 === status.state() }">
                   <span>Stuck Contact Detection</span>
-                  <span data-bind="visible: developerMode">
+                  <span data-bind="visible: safetyMode">
                       <div class="switch">
                           <input type="checkbox" name="stuck" id="mystuck" data-bind="checked: openevse.stuckRelayEnabled">
                           <label for="mystuck"></label>
                       </div>
                   </span>
-                  <span data-bind="text: openevse.stuckRelayEnabled() ? 'Enabled' : 'Disabled',visible: !developerMode()"></span>
+                  <span data-bind="text: openevse.stuckRelayEnabled() ? 'Enabled' : 'Disabled',visible: !safetyMode()"></span>
               </li>
               <li data-bind="css: {error: 10 === status.state() }">
                   <span>Temperature Monitoring</span>
-                  <span data-bind="visible: developerMode">
+                  <span data-bind="visible: safetyMode">
                       <div class="switch">
                           <input type="checkbox" name="temp" id="mytemp" data-bind="checked: openevse.tempCheckEnabled">
                           <label for="mytemp"></label>
                       </div>
                   </span>
-                  <span data-bind="text: openevse.tempCheckEnabled() ? 'Enabled' : 'Disabled',visible: !developerMode()"></span>
+                  <span data-bind="text: openevse.tempCheckEnabled() ? 'Enabled' : 'Disabled',visible: !safetyMode()"></span>
               </li>
               <li data-bind="css: {error: 5 === status.state() }">
                   <span>Diode Check</span>
-                  <span data-bind="visible: developerMode">
+                  <span data-bind="visible: safetyMode">
                       <div class="switch">
                           <input type="checkbox" name="diode" id="mydiode" data-bind="checked: openevse.diodeCheckEnabled">
                           <label for="mydiode"></label>
                       </div>
                   </span>
-                  <span data-bind="text: openevse.tempCheckEnabled() ? 'Enabled' : 'Disabled',visible: !developerMode()"></span>
+                  <span data-bind="text: openevse.tempCheckEnabled() ? 'Enabled' : 'Disabled',visible: !safetyMode()"></span>
               </li>
               <li data-bind="css: {error: 4 === status.state() }">
                   <span>Vent Required</span>
-                  <span data-bind="visible: developerMode">
+                  <span data-bind="visible: safetyMode">
                       <div class="switch" >
                           <input type="checkbox" name="vent" id="myvent" data-bind="checked: openevse.ventRequiredEnabled">
                           <label for="myvent"></label>
                       </div>
                   </span>
-                  <span data-bind="text: openevse.ventRequiredEnabled() ? 'Enabled' : 'Disabled',visible: !developerMode()"></span>
+                  <span data-bind="text: openevse.ventRequiredEnabled() ? 'Enabled' : 'Disabled',visible: !safetyMode()"></span>
               </li>
           </ul>
           <h3>Error</h3>
@@ -976,10 +976,8 @@
 
         <article class="ar_ohm">
           <div class="t_switch">
-              <h2 class="info withimg"><img src="ohm.png" data-src="ohm.png" /></h2>
+              <h2 data-bind="click: toggle.bind($data, showOhm)" class="info withimg"><img src="ohm.png" data-src="ohm.png"/></h2>
 
-              <!-- <h2 data-bind="click: toggle.bind($data, showOhm)" class="info withimg"><img src="ohm.png" data-src="ohm.png"/></h2>
-                -->
               <div class="switch_c">
                   <div class="switch">
                       <input type="checkbox" name="ohm_enabled" id="ohm_enabled"  data-bind="checked: config.ohm_enabled">
@@ -987,8 +985,8 @@
                   </div>
               </div>
           </div>
-          <!-- <div class="message" data-bind="visible: showOhm()"> -->
-          <div class="message">
+
+          <div class="message" data-bind="visible: showOhm()">
               <p>
                 <a href="https://www.ohmconnect.com/" target="_blank" rel="nofollow"> OhmConnect</a> monitors real-time conditions on the electricity grid. When dirty and unsustainable power plants turn
                   on, our users receive a notification to save energy.
