@@ -31,10 +31,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader"
+          'css-loader',
+          'resolve-url-loader',
+          'sass-loader'
         ]
       },
 
@@ -91,7 +93,6 @@ module.exports = {
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: "style.css",
-      chunkFilename: "[id].css"
     }),
     new MergeIntoSingleFilePlugin({
       files: {

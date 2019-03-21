@@ -1,4 +1,4 @@
-import "./style.css";
+import "./sass/evse.scss";
 import "./assets/fonts/open.woff";
 import "./assets/img/emoncms.png";
 import "./assets/img/ohm.png";
@@ -12,4 +12,3 @@ import "./assets/favicon/favicon.ico";
 import "./assets/favicon/mstile-150x150.png";
 import "./assets/favicon/safari-pinned-tab.svg";
 import "./assets/favicon/site.webmanifest";
-
