@@ -26,6 +26,9 @@
     openevse.start();
   });
 
+  command();
+  menuMobile();
+
 })();
 
 
@@ -87,4 +90,36 @@ function updateClass(secs) {
   }
 
   return updateClass;
+}
+
+function menuMobile(){
+  $('.hamb').on('click', function(){
+      var _parent = $(this).parent();
+
+    if (_parent.hasClass('open')){
+    $('body, .overlay').removeClass('lock');
+    _parent.removeClass('open');
+
+    }else{
+      $('body, .overlay').addClass('lock');
+      _parent.addClass('open');
+    }
+
+  });
+
+  $('.menu ul li').on('click', function(){
+    $('body, .overlay').removeClass('lock');
+     $(this).parent().parent().removeClass('open');
+  });
+
+}
+function command(){
+  $('.commands h3').on('click', function(){
+    if($(this).hasClass('open')){
+      $(this).removeClass('open')
+    }else{
+      $('.commands h3').removeClass('open');
+      $(this).addClass('open')
+    }
+  })
 }
