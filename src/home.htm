@@ -371,7 +371,7 @@
 
         <!-- Safety -->
 
-        <article class="ar_safety" data-bind="visible: advancedMode() || !openevse.allTestsEnabled()">
+        <article class="ar_safety" data-bind="visible: advancedMode() || openevse.allTestsEnabled()">
           <div class="t_switch">
               <h2 data-bind="click: toggle.bind($data, showSafety)" class="info">Safety</h2>
               <div class="switch_c">
