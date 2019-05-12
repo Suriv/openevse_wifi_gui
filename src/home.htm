@@ -906,7 +906,7 @@
 
             <div class="connect" data-bind="visible: config.mqtt_enabled">
 
-              <h4 data-bind="text: 1 === status.emoncms_connected() ? 'Connected' : 'Disconnected'"></h4>
+              <h4 data-bind="text: 1 ===  status.mqtt_connected() ? 'Connected' : 'Disconnected'"></h4>
               <span class="socket" data-bind="css: 1 === status.mqtt_connected() ? 'y' : 'n'"></span>
             </div>
             <div class="buttonholder" data-bind="visible: config.mqtt_enabled">
