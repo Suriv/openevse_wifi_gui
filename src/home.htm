@@ -27,7 +27,7 @@
   </div>
 </article>
 
-  <div id="container" data-bind="visible: initialised">
+  <div id="container" data-bind="visible: initialised" style="display:none">
     <header>
         <h1>Open<span>EVSE</span></h1>
         <article class="menu">
@@ -114,7 +114,7 @@
                     <span data-bind="css: {selected: automaticTime() }">Automatic<span>
               </li>
               <li>
-                  <button data-bind="click: setTime">Sync</button>
+                  <button data-bind="click: setTime">Update time</button>
               </li>
           </ul>
           <ul>
