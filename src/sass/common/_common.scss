@@ -76,13 +76,16 @@ input{
   &[type="password"],
   &[type="file"],
   &[type="time"],
-  &[type="date"]{
+  &[type="time" i],
+  &[type="date"],
+  &[type="date" i]{
     width:$hundred;
     margin:0 0 1rem 0;
     padding:0.8rem;
     font-size:1.4rem;
     color:$open-black;
     border:none;
+    font-family: $helvetica-sans;
     border-bottom: 0.1rem solid $open-bluegreen;
   }
   &:focus {
