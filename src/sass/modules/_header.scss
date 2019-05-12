@@ -1,6 +1,6 @@
 header{
   padding:1rem;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0;
   display:flex;
   align-items: baseline;
   position: relative;
@@ -15,7 +15,7 @@ header{
     font-size:3rem;
     font-weight:normal;
     color:$open-bluegreen;
-    margin:0 auto 2rem auto;
+    margin:0 auto;
     position:relative;
     padding:1rem 0 0 8rem;
     width:80%;
