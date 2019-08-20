@@ -1,6 +1,4 @@
-
 import "@scss/evse.scss";
-
 import "@fonts/open.woff";
 import "@img/emoncms.png";
 import "@img/ohm.png";
