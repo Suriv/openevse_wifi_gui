@@ -488,7 +488,7 @@
               </li>
               <li><button data-bind="click: function () { wifi.forceConfig(true); }">Change WiFi network</button></li>
             </ul>
-            <ul class="l_data wf">
+            <ul id="wired-view" class="l_data wf"  data-bind="visible: status.isWired">
               <li>
                 <span><a data-bind="text: status.ipaddress, attr: {href: 'http://'+status.ipaddress()}" rel="nofollow"></a></span>
                 <span>IP Address</span>
@@ -507,8 +507,8 @@
               <button id="apoff" data-bind="visible: status.isWifiAccessPoint, click: wifi.turnOffAccessPoint, disable: wifi.turnOffAccessPointFetching">Turn off Access Point</button>
             </div>
           </div>
-          <!-- <div id="ap-view" data-bind="visible: wifi.canConfigure() &amp;&amp; !wifi.wifiConnecting()"> -->
-          <div id="ap-view">
+          <!-- <div id="ap-view" data-bind="visible: wifi.canConfigure() &amp;&amp; !wifi.wifiConnecting() &amp;&amp; !status.isWired()"> -->
+          <div id="ap-view" >
             <h3>Connect to network:</h3>
 
             <div class="n_steps">
@@ -615,8 +615,8 @@
             <li>
               <h4>Password</h4>
               <input type="text" autocapitalize="none" data-bind="textInput: config.www_password" pattern=".{15}" title="The field requires 15 characters" maxlength="15" required="" >
-              <span class="small-text validMessage">15 characters max</span>
-              <span class="small-text">Web interface HTTP authentication.</span>
+              <span class="validMessage">15 characters max</span>
+              <span>Web interface HTTP authentication.</span>
             </li>
             <li><button data-bind="click: saveAdmin, text: (saveAdminFetching() ? 'Saving' : (saveAdminSuccess() ? 'Saved' : 'Save')), disable: saveAdminFetching">Save</button></li>
           </ul>
@@ -633,6 +633,20 @@
             <button data-bind="click: restart, text: (restartFetching() ? 'Restarting...' : 'Restart'), disable: restartFetching">Restart</button>
             <button data-bind="click: factoryReset, text: (factoryResetFetching() ? 'Resetting...' : 'Factory Reset'), disable: factoryResetFetching">Factory Reset</button>
           </div>
+        </article>
+
+        <article class="ar_admin" data-bind="visible: advancedMode()">
+          <h2>Advanced Settings System</h2>
+          <ul>
+            <li>
+              <h4>Hostname:</h4>
+              <input type="text" autocapitalize="none" data-bind="textInput: config.hostname" pattern=".{31}" title="The field max 31 characters" maxlength="31" required="">
+              <span class="validMessage">31 characters max</span>
+            </li>
+            <li>
+              <button data-bind="click: saveAdvanced, text: (saveAdvancedFetching() ? 'Saving' : (saveAdvancedSuccess() ? 'Saved' : 'Save')), disable: saveAdvancedFetching">Save</button>
+            </li>
+          </ul>
         </article>
 
         <div class="advance">
@@ -878,14 +892,14 @@
                   <p>Dynamically adjust charge rate based on solar PV generation or excess power (grid export).</p>
                   <h4>1. Normal (default):</h4>
                     <ul>
-                      <li><span class="small-text">Charge at maximum current set by EVSE.</span></li>
+                      <li><span class="">Charge at maximum current set by EVSE.</span></li>
                     </ul>
                     <h4>2. Eco:</h4>
                     <ul>
-                      <li><span class="small-text">If only solar PV feed available: charge rate is modulated based on <b>solar PV generation.</b></span></li>
-                      <li><span class="small-text">If grid +I/-E (positive Import / negative Export) feed is available: charge rate will be modulated by available  <b>excess power.</b></span></li>
-                      <li><span class="small-text">If EVSE is sleeping: charging will begin when solar PV / excess power > min charge rate.</span></li>
-                      <li><span class="small-text">Charging will not pause; this avoids excess wear on the EVSE relay and the EV.</span></li>
+                      <li><span class="">If only solar PV feed available: charge rate is modulated based on <b>solar PV generation.</b></span></li>
+                      <li><span class="">If grid +I/-E (positive Import / negative Export) feed is available: charge rate will be modulated by available  <b>excess power.</b></span></li>
+                      <li><span class="">If EVSE is sleeping: charging will begin when solar PV / excess power > min charge rate.</span></li>
+                      <li><span class="">Charging will not pause; this avoids excess wear on the EVSE relay and the EV.</span></li>
                     </ul>
                     <span><strong>Note: It's assumed that EVSE power is included in the grid feed.</strong></span>
 
@@ -899,7 +913,7 @@
                   <li>
                       <b>Grid (+I/-E) topic:</b><br>
                       <input data-bind="textInput: config.mqtt_grid_ie, enable: '' === config.mqtt_solar()" type="text" autocapitalize="none" hint="emon/emonpi/power1"><br>
-                      <span class="small-text">Grid (+I/-E) MQTT topic to modulate charge rate based on <b>excess power</b></span>
+                      <span class="">Grid (+I/-E) MQTT topic to modulate charge rate based on <b>excess power</b></span>
                   </li>
                 </ul>
             </div>
