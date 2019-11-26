@@ -57,7 +57,7 @@ function OpenEvseWiFiViewModel(baseHost, basePort, baseProtocol)
   self.showSolarDivert = ko.observable(false);
   self.showSafety = ko.observable(false);
   self.showOhm = ko.observable(false);
-  self.safetyMode = ko.observable(false);
+  self.safetyMode = ko.observable(false)
 
   self.toggle = function (flag) {
     flag(!flag());
