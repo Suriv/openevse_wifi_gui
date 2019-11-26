@@ -482,12 +482,15 @@
           <h3>Mode: <span id="mode" data-bind="text: status.fullMode">ddd</span></h3>
 
           <div id="client-view" data-bind="visible: !wifi.canConfigure() &amp;&amp; !wifi.wifiConnecting()">
+
+
             <ul id="sta-ssid" class="l_ssid">
               <li data-bind="click: function () { wifi.forceConfig(true); }">
                 <span class="point _50" data-bind="text: config.ssid" class="middle">BTHub3-ZWCW</span>
               </li>
               <li><button data-bind="click: function () { wifi.forceConfig(true); }">Change WiFi network</button></li>
             </ul>
+
             <ul id="wired-view" class="l_data wf"  data-bind="visible: status.isWired">
               <li>
                 <span><a data-bind="text: status.ipaddress, attr: {href: 'http://'+status.ipaddress()}" rel="nofollow"></a></span>
@@ -868,8 +871,22 @@
             <ul class="l_form mq_s" data-bind="visible: config.mqtt_enabled">
               <li>
                 <h4>Host</h4>
-                <input data-bind="textInput: config.mqtt_server" type="text" autocapitalize="none" required>
+                <select data-bind="options: config.mqtt_supported_protocols,
+                                  optionsText: function(item) {
+                                    return item + '://'
+                                  },
+                                  value: config.mqtt_protocol"></select>
                 <span>e.g 'emonpi', 'test.mosquitto.org', '192.168.1.4'</span>
+              </li>
+             <!-- <li data-bind="visible: config.mqtt_enabled() &amp;&amp; config.mqtt_port_enable()"> -->
+              <li>
+                 <h4>Port:</h4>
+                  <input data-bind="textInput: config.mqtt_port" type="number" autocapitalize="none">
+              </li>
+              <li>
+                  <h4>Reject self-signed certificates:</h4>
+                  <input type="checkbox" data-bind="checked: config.mqtt_reject_unauthorized" />
+                  <div class="slider round"></div>
               </li>
               <li>
                 <h4>Username <span>blank - no authentication</span></h4>

@@ -73,6 +73,7 @@ span{
 input{
   display:block;
   &[type="text"],
+  &[type="number"],
   &[type="password"],
   &[type="file"],
   &[type="time"],
