@@ -1,8 +1,8 @@
 button, .button{
   width:$hundred;
   margin:0 0 1rem 0;
-  background: $open-bluegreen;
-  color:$open-white;
+  background: $open_19;
+  color:$open_28;
   font-weight: bold;
   font-size:1.4rem;
   padding:0.9rem 0.5rem;
@@ -12,15 +12,15 @@ button, .button{
   cursor: pointer;
 
   &.second{
-    background:$open-very-light-pink-four;
-    color:$open-greyish-brown;
+    background:$open_10;
+    color:$open_03;
   }
 
   &:disabled{
     @include disabled();
-    border:0.1rem solid $open-very-light-pink-four;
-    background:$open-white;
-    color:$open-very-light-pink-five;
+    border:0.1rem solid $open_10;
+    background:$open_28;
+    color:$open_09;
   }
 
 }

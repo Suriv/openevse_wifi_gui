@@ -6,18 +6,18 @@
     justify-content: space-between;
     @include clearfix();
     &.error{
-      border-left:0.5rem solid $open-orangish-red;
+      border-left:0.5rem solid $open_23;
       span{
-        color:$open-orangish-red;
+        color:$open_23;
       }
     }
     span{
       width:49%;
       padding:0.5rem;
 
-      color:$open-heather;
+      color:$open_06;
       &:nth-child(2){
-        color:$open-greyish-brown;
+        color:$open_03;
       }
       &:nth-child(3){
         text-align:right;

@@ -27,11 +27,11 @@
   }
   &::before{
     content:$open-fill-1;
-    color:$open-heather;
+    color:$open_06;
   }
   &::after{
     content:$open-fill-4;
-    color:$open-bluegreen;
+    color:$open_19;
     margin: 0 0 0 0.5rem;
   }
   &.y{

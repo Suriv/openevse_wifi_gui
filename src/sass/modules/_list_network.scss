@@ -2,14 +2,14 @@
 
   padding:0;
   li{
-    border-bottom: 0.1rem solid  $open-very-light-pink-three;
+    border-bottom: 0.1rem solid  $open_11;
 
     .net{
       position:relative;
       width:$hundred;
       padding:1rem 0.5rem;
       &.selected{
-        background: $open-very-light-pink-four-16;
+        background: $open_12;
       }
       input{
         display:none;
@@ -38,7 +38,7 @@
     }
     a{
       font-size:1.4rem;
-      color:$open-greyish-brown;
+      color:$open_03;
       position:relative;
       padding:0 0 0 4rem;
       &::before{
@@ -51,8 +51,8 @@
         height:3rem;
         font-size:1.5rem;
         line-height: 2.5rem;
-        color:$open-white;
-        background:$open-bluegreen;
+        color:$open_28;
+        background:$open_19;
         border-radius:5rem;
       }
     }

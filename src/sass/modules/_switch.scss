@@ -6,7 +6,7 @@
     font-size:1.4rem;
     margin:0 1rem 0 1rem;
     &.selected{
-      color:$open-bluegreen;
+      color:$open_19;
     }
   }
   div{
@@ -22,17 +22,17 @@
     display: none;
 
     &:checked + label {
-      background-color: $open-bluegreen-50;
+      background-color: $open_20;
     }
     &:checked + label, &:checked + label:before {
-     border-color:$open-bluegreen-50;
+     border-color:$open_20;
     }
     &:checked + label .switch-inner {
       margin-left: 0;
     }
     &:checked + label:before {
       right: 0px;
-      background:$open-bluegreen;
+      background:$open_19;
     }
   }
 
@@ -42,15 +42,15 @@
     height: 1.3rem;
     padding: 0;
     line-height: 1.3rem;
-    border: 0px solid $open-white;
+    border: 0px solid $open_28;
     border-radius: 2.3rem;
-    background: $open-brownish-grey-50;
+    background: $open_13;
 
     &::before{
       content: "";
       display: block; width: 2.3rem;
       margin: -0.5rem;
-      background: $open-brownish-grey;
+      background: $open_02;
       position: absolute; top: 0; bottom: 0;
       right: 1.3rem;
       border-radius: 2.3rem;

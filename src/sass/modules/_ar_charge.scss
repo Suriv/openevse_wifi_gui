@@ -5,7 +5,7 @@
     margin:1rem 0;
   }
   .options{
-   border-bottom:0.1rem solid $open-very-light-pink-five;
+   border-bottom:0.1rem solid $open_09;
   }
 
   .mode{
@@ -29,16 +29,16 @@
         }
       }
       .updateBad {
-        color: $open-orangish-red;
+        color: $open_23;
       }
       .updateGood {
-        color: $open-leafy-green;
+        color: $open_18;
       }
       .updateSlow {
-        color:$open-squash;
+        color:$open_21;
       }
       .updateSlower {
-        color:$open-orange;
+        color:$open_22;
       }
   }
 

@@ -4,16 +4,16 @@
     display:flex;
     justify-content: space-between;
     padding:0 0 0.5rem 0;
-    border-bottom:0.1rem solid $open-very-light-pink-three;
+    border-bottom:0.1rem solid $open_11;
     span{
       width:11%;
       padding:0.5rem;
       font-size:1.4rem;
-      color:$open-greyish-brown;
+      color:$open_03;
 
       &:nth-child(2){
         width:87%;
-        color:$open-heather;
+        color:$open_06;
 
       }
     }

@@ -4,9 +4,9 @@
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     padding:1.5rem 4rem 1.5rem 1.6rem;
-    background:$open-vibrant-green;
+    background:$open_17;
     h2, h3{
-      color:$open-white;
+      color:$open_28;
       width:$hundred;
     }
     h2{
@@ -19,21 +19,21 @@
   }
 
   &.ready .status {
-    background:$open-vibrant-green;
+    background:$open_17;
   }
   &.connected .status {
-    background:$open-pale-lime;
+    background:$open_25;
     h2,h3{
-      color:$open-greyish-brown;
+      color:$open_03;
     }
   }
   &.charging .status {
-    background:$open-azure;
+    background:$open_16;
     h2,h3{
-      color:$open-white;
+      color:$open_28;
     }
   }
   &.sleeping .status {
-    background:$open-vivid-purple;
+    background:$open_26;
   }
 }

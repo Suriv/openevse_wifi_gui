@@ -1,12 +1,12 @@
 .message{
   margin:1rem 0;
   padding:1.5rem 1rem;
-  border-left:0.6rem solid $open-very-light-pink-two;
+  border-left:0.6rem solid $open_08;
   width:$hundred;
   &.error{
-    border-color:$open-orangish-red;
+    border-color:$open_23;
     h4{
-      color:$open-orangish-red;
+      color:$open_23;
     }
   }
 
@@ -18,17 +18,17 @@
     margin:1rem 0;
   }
   &.warning{
-    border-color:$open-dandelion;
+    border-color:$open_24;
   }
 
   &.scan{
     text-align:center;
     margin:1rem 0;
     border:none;
-    background:$open-very-light-pink-four-16;
+    background:$open_12;
     padding:1.5rem 0;
     p{
-      color:$open-purple-grey;
+      color:$open_04;
       font-size:2.4rem;
     }
   }

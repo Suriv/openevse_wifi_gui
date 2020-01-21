@@ -21,7 +21,7 @@
     span{
       width: 3.2rem;
       height: 0.2rem;
-      background: $open-bluegreen;
+      background: $open_19;
       display: block;
       transition: all 0.125s ease-out;
       border-radius:0.5rem;
@@ -67,7 +67,7 @@
     }
 
     label {
-      color: $open-very-light-pink;
+      color: $open_07;
       cursor: pointer;
       font-size: 2rem;
       line-height: 2rem;
@@ -76,13 +76,13 @@
     }
 
     input:hover + label {
-      color: $open-bluegreen;
-      border-bottom:0.3rem solid $open-bluegreen;
+      color: $open_19;
+      border-bottom:0.3rem solid $open_19;
     }
 
     input:checked + label {
-      color: $open-bluegreen;
-      border-bottom:0.3rem solid $open-bluegreen;
+      color: $open_19;
+      border-bottom:0.3rem solid $open_19;
       @include disabled();
     }
   }
