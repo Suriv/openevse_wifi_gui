@@ -1,3 +1,45 @@
 .darkmode{
+ background:$open_01;
+ color:$open_28;
 
+ input{
+  &[type="text"],
+  &[type="number"],
+  &[type="password"],
+  &[type="file"],
+  &[type="time"],
+  &[type="time" i],
+  &[type="date"],
+  &[type="date" i]{
+    background:none;
+    color:$open_28;
+    border-color: $open_29;
+  }
+}
+
+ header h1 span{
+   color:$open_28;
+ }
+ .menu {
+   background:none;
+   border:none;
+    ul {
+      background:$open_01;
+      li {
+        label{
+          color:$open_28;
+        }
+      input:hover + label, input:checked + label {
+        border-bottom:0.3rem solid $open_29;
+        color:$open_29;
+      }
+    }
+  }
+ }
+ article{
+   box-shadow:none;
+   border:0.1rem solid $open_34;
+   background:$open_30;
+
+ }
 }

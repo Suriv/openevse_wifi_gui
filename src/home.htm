@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body class="darkmode">
 <article data-bind="visible: !initialised()" class="load">
   <div class="message">
       <p>Loading, please wait... (<span data-bind="text: itemsLoaded"></span>/<span data-bind="text: itemsTotal"></span>)</p>
@@ -1060,7 +1060,7 @@
   </div>
   <footer>
     <p>Powered by <a href="http://www.openevse.com">OpenEVSE</a> and <a href="https://openenergymonitor.org">OpenEnergyMonitor</a></b>
-    <p><strong>Version:</strong>V <span data-bind="text: config.version"></span></p>
+    <p><strong>Version:</strong> V<span data-bind="text: config.version"></span></p>
   </footer>
 
   <!--end page -->

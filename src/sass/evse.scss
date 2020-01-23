@@ -23,7 +23,6 @@
 @import "modules/connect";
 
 
-
 // Sections
 @import "modules/load";
 @import "modules/header";
@@ -47,3 +46,6 @@
 @media (map-get($rd-types, lg)){
 }
 
+
+// Darkmode
+@import "modules/darkmode";
