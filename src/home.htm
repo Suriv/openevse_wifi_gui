@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body class="darkmode">
+<body>
 <article data-bind="visible: !initialised()" class="load">
   <div class="message">
       <p>Loading, please wait... (<span data-bind="text: itemsLoaded"></span>/<span data-bind="text: itemsTotal"></span>)</p>
@@ -986,7 +986,7 @@
             </li>
           </ul>
           <ul class="l_data" data-bind="visible: config.emoncms_enabled">
-            <li>
+            <li class="c_socket">
                 <span class="socket" data-bind="css: 1 === status.emoncms_connected() ? 'y' : 'n'"></span>
                 <span data-bind="text: 1 === status.emoncms_connected() ? 'Connected' : 'Disconnected'"></span>
             </li>

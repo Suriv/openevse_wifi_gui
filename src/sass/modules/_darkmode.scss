@@ -1,25 +1,27 @@
-.darkmode{
+.dark{
  background:$open_01;
  color:$open_28;
 
- input{
-  &[type="text"],
-  &[type="number"],
-  &[type="password"],
-  &[type="file"],
-  &[type="time"],
-  &[type="time" i],
-  &[type="date"],
-  &[type="date" i]{
+  input{
     background:none;
     color:$open_28;
     border-color: $open_29;
   }
-}
+  a {
+    color:$open_33;
+  }
+  .switch_c{
+    span.selected{
+      color:$open_29;
+    }
+    .switch input:checked+label:before{
+      background::$open_29
+    }
+  }
 
- header h1 span{
-   color:$open_28;
- }
+  header h1 span,.advance label{
+    color:$open_28;
+  }
  .menu {
    background:none;
    border:none;
@@ -41,5 +43,8 @@
    border:0.1rem solid $open_34;
    background:$open_30;
 
+ }
+ .l_form li.link a{
+  color:$open_28;
  }
 }
