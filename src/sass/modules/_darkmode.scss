@@ -15,7 +15,7 @@
       color:$open_29;
     }
     .switch input:checked+label:before{
-      background::$open_29
+      background:$open_29
     }
   }
 
@@ -25,8 +25,12 @@
  .menu {
    background:none;
    border:none;
+
+   .hamb{
+     background:$open_34;
+   }
     ul {
-      background:$open_01;
+      background:$open_34;
       li {
         label{
           color:$open_28;
@@ -46,5 +50,10 @@
  }
  .l_form li.link a{
   color:$open_28;
+ }
+ @media (map-get($rd-types, lg)){
+  .menu ul{
+    background:$open_01;
+  }
  }
 }

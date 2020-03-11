@@ -57,7 +57,9 @@ function OpenEvseWiFiViewModel(baseHost, basePort, baseProtocol)
   self.showSolarDivert = ko.observable(false);
   self.showSafety = ko.observable(false);
   self.showOhm = ko.observable(false);
-  self.safetyMode = ko.observable(false)
+  self.safetyMode = ko.observable(false);
+  self.darkMode = ko.observable(false);
+
 
   self.toggle = function (flag) {
     flag(!flag());
@@ -96,6 +98,7 @@ function OpenEvseWiFiViewModel(baseHost, basePort, baseProtocol)
   self.isSystem = ko.pureComputed(function() { return "system" === self.tab(); });
   self.isServices = ko.pureComputed(function() { return "services" === self.tab(); });
   self.isStatus = ko.pureComputed(function() { return "status" === self.tab(); });
+  self.isSetting = ko.pureComputed(function() { return "setting" === self.tab(); });
   self.isRapi = ko.pureComputed(function() { return "rapi" === self.tab(); });
 
   // Upgrade URL

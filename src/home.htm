@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body data-bind="css: {dark: darkMode }">
 <article data-bind="visible: !initialised()" class="load">
   <div class="message">
       <p>Loading, please wait... (<span data-bind="text: itemsLoaded"></span>/<span data-bind="text: itemsTotal"></span>)</p>
@@ -39,7 +39,7 @@
             <ul>
                 <li>
                   <input id="tab-3" type="radio" name="tab-group" data-bind="checked: tab" value="status" />
-                  <label for="tab-3">OpenEVSE</label>
+                  <label for="tab-3">Main</label>
                 </li>
                 <li>
                   <input id="tab-1" type="radio" name="tab-group" data-bind="checked: tab" value="system" />
@@ -49,12 +49,17 @@
                   <input id="tab-2" type="radio" name="tab-group" data-bind="checked: tab" value="services" />
                   <label for="tab-2">Services</label>
                 </li>
+                <li>
+                  <input id="tab-4" type="radio" name="tab-group" data-bind="checked: tab" value="setting" />
+                  <label for="tab-4">Settings</label>
+                </li>
             </ul>
         </article>
 
     </header>
     <!--TAB 1: OpenEVSE -->
     <section id="content-1" data-bind="visible: isStatus">
+
         <!-- Session Status -->
 
         <article class="message error" data-bind="visible: openevse.isError">
@@ -1056,6 +1061,26 @@
         </article>
     </section>
     <!--end tab 3-->
+
+    <section id="content-4"  data-bind="visible: isSetting">
+
+        <!-- Dark Mode -->
+        <article class="settings">
+          <ul class="l_data_s">
+            <li>
+              <span>Dark mode</span>
+              <span>
+                  <div class="switch">
+                    <input type="checkbox" name="darkswitch" id="mydarkswitch" data-bind="checked: darkMode">
+                    <label for="mydarkswitch"></label>
+                </div>
+              </span>
+
+            </li>
+          </ul>
+        </article>
+
+  </section>
 
   </div>
   <footer>

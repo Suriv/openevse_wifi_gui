@@ -238,6 +238,9 @@ function OpenEvseViewModel(baseEndpoint, statusViewModel) {
   self.updatingVentRequiredEnabled = ko.observable(false);
   self.savedVentRequiredEnabled = ko.observable(false);
 
+  //Dark mode
+  self.darkMode = ko.observable(false);
+
   self.setForTime = function (flag, time) {
     flag(true);
     setTimeout(function () { flag(false); }, time);
