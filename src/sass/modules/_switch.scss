@@ -48,10 +48,14 @@
 
     &::before{
       content: "";
-      display: block; width: 2.3rem;
+      display: block;
+      width: 2.3rem;
+      height:2.3rem;
       margin: -0.5rem;
       background: $open_02;
-      position: absolute; top: 0; bottom: 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
       right: 1.3rem;
       border-radius: 2.3rem;
     }

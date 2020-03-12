@@ -116,7 +116,7 @@
                         <input type="checkbox" name="onoffswitch" id="myonoffswitch"  data-bind="checked: automaticTime">
                         <label for="myonoffswitch"></label>
                     </div>
-                    <span data-bind="css: {selected: automaticTime() }">Automatic<span>
+                    <divº data-bind="css: {selected: automaticTime() }">Automatic<span>
               </li>
               <li>
                   <button data-bind="click: setTime">Update time</button>
@@ -929,14 +929,22 @@
                 <ul class="l_form">
                   <li>
                     <h4>SolarPV-gen topic</h4>
-                    <input data-bind="textInput: config.mqtt_solar, enable: '' === config.mqtt_grid_ie()" type="text" autocapitalize="none" hint="emon/emonpi/power2"><br>
-                    <span>Solar PV MQTT topic to modulate charge rate based on solar</span>
-                  </li>
-                  <li>
-                      <b>Grid (+I/-E) topic:</b><br>
+                    <select>
+                      <option value="0">none</option>
+                      <option value="1">SolarPV-gen</option>
+                      <option value="2">Grid</option>
+                    </select>
+
+                    <span>
+                      <input data-bind="textInput: config.mqtt_solar, enable: '' === config.mqtt_grid_ie()" type="text" autocapitalize="none" hint="emon/emonpi/power2"><br>
+                      <span>Solar PV MQTT topic to modulate charge rate based on solar</span>
+                    </span>
+                    <span>
                       <input data-bind="textInput: config.mqtt_grid_ie, enable: '' === config.mqtt_solar()" type="text" autocapitalize="none" hint="emon/emonpi/power1"><br>
                       <span class="">Grid (+I/-E) MQTT topic to modulate charge rate based on <b>excess power</b></span>
+                    </span>
                   </li>
+
                 </ul>
             </div>
 
@@ -1065,18 +1073,16 @@
     <section id="content-4"  data-bind="visible: isSetting">
 
         <!-- Dark Mode -->
-        <article class="settings">
-          <ul class="l_data_s">
+        <article class="ar_set">
+          <ul>
             <li>
               <span>Dark mode</span>
-              <span>
-                  <div class="switch">
+                <div class="switch">
                     <input type="checkbox" name="darkswitch" id="mydarkswitch" data-bind="checked: darkMode">
                     <label for="mydarkswitch"></label>
                 </div>
-              </span>
-
             </li>
+
           </ul>
         </article>
 

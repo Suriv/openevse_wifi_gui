@@ -17,7 +17,14 @@ function OpenEvseViewModel(baseEndpoint, statusViewModel) {
     { name: "Auto", value: 0 },
     { name: "1", value: 1 },
     { name: "2", value: 2 }];
+
   self.currentLevels = ko.observableArray([]);
+
+  self.solarOptions = [
+    { name: "none", value: 0 },
+    { name: "SolarPV-gen", value: 1 },
+    { name: "Grid", value: 2 }];
+
   self.timeLimits = [
     { name: "none", value: 0 },
     { name: "15 min", value: 15 },

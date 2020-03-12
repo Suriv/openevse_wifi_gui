@@ -1,0 +1,33 @@
+.ar_set{
+  width:75%;
+  margin:0 auto 2rem auto;
+  padding:1.6rem 0 0 0;
+  ul {
+    li{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      margin: 0 auto 1.5rem auto;
+      padding: 0 5% 1rem;
+      border-bottom:0.1rem solid $open_32;
+      span{
+        font-size:1.4rem;
+      }
+      &:last-child{
+        border:none;
+        margin-bottom: 1rem;
+      }
+
+    }
+  }
+
+
+  @media (map-get($rd-types, lg)){
+    ul{
+
+    }
+  }
+
+
+}
