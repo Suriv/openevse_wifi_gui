@@ -6,7 +6,7 @@
     padding:1.5rem 4rem 1.5rem 1.6rem;
     background:$open_17;
     h2, h3{
-      color:$open_28;
+      color:$open_30;
       width:$hundred;
     }
     h2{
@@ -23,15 +23,9 @@
   }
   &.connected .status {
     background:$open_25;
-    h2,h3{
-      color:$open_03;
-    }
   }
   &.charging .status {
     background:$open_16;
-    h2,h3{
-      color:$open_28;
-    }
   }
   &.sleeping .status {
     background:$open_26;

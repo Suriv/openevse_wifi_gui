@@ -2,6 +2,14 @@
  background:$open_01;
  color:$open_28;
 
+ .info::after{
+   color:$open_29;
+ }
+ button, .button{
+  background: $open_29;
+  color:$open_30;
+ }
+
   input{
     background:none;
     color:$open_28;
